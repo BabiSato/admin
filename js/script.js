@@ -10,7 +10,7 @@ const getDadosForm = function() {
 
     // Recebe as caixas do HTML os dados a serem enviados para a API
     let nomeLivro = document.getElementById('title')
-    let autorLivro = document.getElementById('author') // Corrigido o id para 'author'
+    let autorLivro = document.getElementById('author')
     let valorLivro = document.getElementById('price')
 
     if(nomeLivro.value == '' || autorLivro.value == '' || valorLivro.value == '') {
@@ -19,8 +19,8 @@ const getDadosForm = function() {
     } else {
         // Criamos um objeto JSON com os atributos necessários
         livroJSON.title = nomeLivro.value
-        livroJSON.author = autorLivro.value // Alterado 'autor' para 'author'
-        livroJSON.price = parseFloat(valorLivro.value) // Garantindo que price seja um número
+        livroJSON.author = autorLivro.value
+        livroJSON.price = parseFloat(valorLivro.value)
     }
 
     if(status) {
@@ -34,7 +34,7 @@ const getDadosForm = function() {
 const postLivro = async function(dadosLivro) {
     let url = bk
 
-    console.log("Enviando dados:", dadosLivro)  // Adicionando log para verificar os dados
+    console.log("Enviando dados:", dadosLivro)
 
     let response = await fetch(url, {
         method: 'POST',
@@ -84,7 +84,7 @@ const setCardItens = function(dadosLivros) {
 
         // Escrevendo os dados do ARRAY de livros nos elementos HTML
         divTitle.innerText      = livro.title
-        divAutor.innerText      = livro.author // Alterado 'autor' para 'author'
+        divAutor.innerText      = livro.author
         divPrice.innerText      = livro.price
 
         // Adiciona atributos nas tags HTML
@@ -110,7 +110,7 @@ const getBuscarLivro = async function(id) {
     if(response.status == 200) {
         // Coloca os dados da API nas caixas do formulário
         document.getElementById('title').value = dados.books[0].title
-        document.getElementById('author').value = dados.books[0].author // Alterado 'autor' para 'author'
+        document.getElementById('author').value = dados.books[0].author
         document.getElementById('price').value = dados.books[0].price
 
         // Guardando o ID do livro na área de sessão do navegador, para ser utilizado no put
