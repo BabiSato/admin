@@ -5,14 +5,10 @@
     --sombra: #e2b496;
     --Verde: #28a745;
     --link: #ea00ff;
-   
-
-
     --Bege-claro: #F5F5DC;
     --Marrom-escuro: #654321;
     --Verde-oliva: #556B2F;
     --Vermelho-vinho: #8B0000;
-
     --areia: #f7cb07;
     --pastel-grey: #cac6bb;
     --silver-sand: #e0dfda;
@@ -20,16 +16,6 @@
     --pastel-brown: #a18c74;
     --green-mist: #d2cbaf;
 }
-
-/* Base: Bege claro (#F5F5DC)
-
-Detalhes: Marrom escuro (#654321)
-
-Apoio: Verde oliva (#556B2F)
-
-Acento: Vermelho vinho (#8B0000)
-
-Texto: Preto (#000000) */
 
 *{
     margin: 0;
