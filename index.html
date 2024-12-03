@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/script.js" defer type="module"></script>
     <title>Livraria</title>
 </head>
 <body>
     <header>
-        Sistema de Gerenciamento de Livros 
+        <i class="fi fi-rr-globe"></i>Sistema de Gerenciamento de Livros<i class="fi fi-rr-globe"></i>
     </header>
 
     <div id="principal">
-        <h1>Cadastro de Livros</h1>
+        <h1><i class="fi fi-rr-clipboard-list-check"></i> Cadastro de Livros <i class="fi fi-rr-clipboard-list-check"></i></h1>
         <form id="form">
-            <label>Title</label> 
-            <input type="text" name="txt_title" id="title" ><br>
+            <label><i class="fi fi-rr-pencil"></i> Titulo</label> 
+            <input type="text" id="Titulo" ><br>
 
-            <label>Autor</label>
-            <input type="text" name="txt_author" id="author"><br> <!-- Corrigido para 'author' -->
+            <label><i class="fi fi-rr-copyright"></i> Autor</label>
+            <input type="text" id="author"><br>
             
-            <label>Price</label> 
-            <input type="text" name="txt_price" id="price" ><br>
+            <label><i class="fi fi-rr-tags"></i> Preço</label> 
+            <input type="text" id="preco" ><br>
             
             <div id="salvar"> Salvar </div>
         </form>
@@ -31,11 +38,26 @@
     <div id="listLivros">
         <h1> Listagem de Livros </h1>
         <div class="linha">
-            <div class="titulo">Title</div>
-            <div class="titulo">Autor</div>
-            <div class="titulo">Price</div>
+            <div class="titulo"><i class="fi fi-rr-pencil"></i>Titulo</div>
+            <div class="titulo"><i class="fi fi-rr-copyright"></i>Autor</div>
+            <div class="titulo"><i class="fi fi-rr-tags"></i>Preço</div>
         </div>
         <div id="listDados"></div>
     </div>
+
+    <footer id="rodape">
+        <p>
+            <i class="fi fi-rr-circle-user">Raphael Guerra</i><br><a href="https://www.linkedin.com/in/raphael-guerra-de-lima-b03968255/" target="_blank"><i class="fi fi-brands-linkedin"></i> Linkedin</a> | 
+            <a href="https://github.com/RL-Guerra" target="_blank"><i class="fi fi-brands-github"></i> GitHub</a>
+        </p>
+        <p>
+            <i class="fi fi-rr-circle-user">Barbara Nayumi</i><br><a href="https://www.linkedin.com/in/barbara-nayumi-301433241/" target="_blank"><i class="fi fi-brands-linkedin"></i> Linkedin</a> | 
+            <a href="https://github.com/BabiSato" target="_blank"><i class="fi fi-brands-github"></i> GitHub</a>
+        </p>
+        <p>
+            <i class="fi fi-rr-circle-user">Leonardo Braga</i><br><a href="https://www.linkedin.com/in/leonardo-sales-9a0691261/" target="_blank"><i class="fi fi-brands-linkedin"></i> Linkedin</a> | 
+            <a href="https://github.com/leleo9" target="_blank"><i class="fi fi-brands-github"></i> GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

@@ -1,102 +1,175 @@
-body {
-    font-family: Arial, sans-serif;
+:root{
+    --fonte-principal: 'Inter', sans-serif;
+    --branco: #ffffff;
+    --preto: #000000;
+    --sombra: #e2b496;
+    --Verde: #28a745;
+    --link: #ea00ff;
+   
+
+
+    --Bege-claro: #F5F5DC;
+    --Marrom-escuro: #654321;
+    --Verde-oliva: #556B2F;
+    --Vermelho-vinho: #8B0000;
+
+    --areia: #f7cb07;
+    --pastel-grey: #cac6bb;
+    --silver-sand: #e0dfda;
+    --granite: #868174;
+    --pastel-brown: #a18c74;
+    --green-mist: #d2cbaf;
+}
+
+/* Base: Bege claro (#F5F5DC)
+
+Detalhes: Marrom escuro (#654321)
+
+Apoio: Verde oliva (#556B2F)
+
+Acento: Vermelho vinho (#8B0000)
+
+Texto: Preto (#000000) */
+
+*{
     margin: 0;
     padding: 0;
-    background-color: #d8bcbc;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--Bege-claro);
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--Marrom-escuro);
+    color: var(--branco);
+    font-weight: bold;
     padding: 15px;
     text-align: center;
     font-size: 24px;
+    letter-spacing: 7px;
 }
 
 #principal {
     padding: 20px;
     margin: 20px;
     border: 1px solid #ddd;
-    background-color: white;
-    border-radius: 8px;
-}
+    background-color: var(--granite);
+    border-radius: 13px;
+    border: 1.5px dashed var(--sombra);
+    color: var(--branco);
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#salvar {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-#salvar:hover {
-    background-color: #218838;
+    & h1{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    & form {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    & label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    & input {
+        width: 95%;
+        padding: 13px;
+        margin-bottom: 17px;
+        border: 1px solid var(--pastel-brown);
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    & #salvar {
+        width: 95%;
+        background-color: var(--Verde);
+        color: var(--preto);
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 27px;
+        transition: background-color 0.3s ease;
+    } & #salvar:hover{
+        background-color: var(--Verde-oliva);
+        color: var(--branco);
+    }
 }
 
 #listLivros {
     margin-top: 40px;
+    margin: 20px;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    background-color: var(--silver-sand);
+    border-radius: 13px;
+    border: 1px solid var(--sombra);
+    font-size: 24px;
+
+    & h1{
+        text-align: center;
+    }
+    & .linha {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--branco);
+    }
+    & .titulo {
+        color: var(--branco);
+        font-weight: bold;
+        padding: 7px;
+        width: 33%;
+        font-size: 22px;
+        text-align: center;
+        padding-left: 10px;
+        background-color: var(--Marrom-escuro);
+    }
 }
 
-.linha {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.titulo {
-    font-weight: bold;
-    width: 30%;
-    font-size: 18px;
-    text-align: left;
-    padding-left: 10px;
-}
-
-#listDados {
+& #listDados {
     margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+
+    & .dados {
+        padding: 13px 0;
+    }
+    & .dados:hover{
+        border: 1px solid var(--sombra);
+    }
+    & .dados div {
+        width: 33%;
+        padding-left: 10px;
+        
+    }
 }
 
-.dados {
+/*Rodapé*/
+footer#rodape{
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
+    background-color: var(--Marrom-escuro);
+    justify-content: space-around;
+    align-items: center;
+    color: var(--branco);
+    margin-top: 20px;
+    clear: both;
+    border-top: 3px solid var(--sombra);
+    text-align: center;
+    font-size: 20px;
 
-.dados div {
-    width: 30%;
-    padding-left: 10px;
-    font-size: 16px;
+    & p{
+        margin: 10px;
+    }
+    & a{
+        text-decoration: none;
+        color: var(--branco);
+    }
+    & a:hover{
+        color: var(--link);
+        text-decoration: underline;
+    }
 }
